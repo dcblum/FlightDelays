@@ -174,93 +174,111 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZXQgdGhlIHdvcmtpbmcgRGlyZWN0b3J5XG5zZXR3ZChcIi9ob21lL2RhdmlkL0Rlc2t0b3AvRGF0YUFuYWx5c2lzUHJvamVjdHMvRmxpZ2h0RGVsYXlzXCIpXG4jIFJlYWQgaW4gRGF0YVxuZmxpZ2h0X2RhdGFfZnVsbCA9IHJlYWQuY3N2KCdkYXRhL2ZsaWdodF8yMDAzXzIwMTcuY3N2JywgaGVhZGVyID0gVFJVRSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZXQgdGhlIHdvcmtpbmcgRGlyZWN0b3J5XG5zZXR3ZChcIi9ob21lL2RhdmlkL0Rlc2t0b3AvRGF0YUFuYWx5c2lzUHJvamVjdHMvRmxpZ2h0RGVsYXlzXCIpXG4jIFJlYWQgaW4gRGF0YVxuZmxpZ2h0X2RhdGFfZnVsbCA9IHJlYWQuY3N2KCdkYXRhL2ZsaWdodF8yMDAzXzIwMTcuY3N2JywgaGVhZGVyID0gVFJVRSlcbiMgVGFrZSBvdXQgdW51c2VkIHZhcmlhYmxlc1xuZmxpZ2h0X2RhdGEgPC0gc3Vic2V0KGZsaWdodF9kYXRhX2Z1bGwsIFxuICAgICAgICAgICAgICAgICAgICAgIHNlbGVjdCA9IC1jKFgubW9udGgsIGFpcnBvcnQsIGFpcnBvcnRfbmFtZSwgWC5hcnJfZGVsYXksIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFguY2Fycmllcl9kZWxheSwgd2VhdGhlcl9kZWxheSwgbmFzX2RlbGF5LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZWN1cml0eV9kZWxheSwgbGF0ZV9haXJjcmFmdF9kZWxheSwgWCwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FycmllcikpXG4jIEtlZXAgeWVhciBhbmQgY2Fycmllcl9uYW1lIGFuZCBzdW0gYWxsIHNpbWlsYXIgY29sdW1uc1xuZmxpZ2h0X2RhdGFfc2hhcGVkIDwtIGFnZ3JlZ2F0ZSgufnllYXIrY2Fycmllcl9uYW1lLCBmbGlnaHRfZGF0YSwgc3VtKVxuIyBHZW5lcmF0ZSBmdW5jdGlvbnMgdG8gZmluZCBwZXJjZW50cyBmb3Igc3BlY2lmaWMgdmFyaWFibGVzXG5mbGlnaHRfZGF0YV9wZXJjZW50IDwtIGZsaWdodF9kYXRhX3NoYXBlZFxuIyBDYXJyaWVycyBvbl90aW1lXG5mbGlnaHRfZGF0YV9wZXJjZW50JE9uX1RpbWUgPC0gXG4gIChmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzIC0gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGVsMTUgLSBcbiAgICAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfY2FuY2VsbGVkIC0gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGl2ZXJ0ZWQgKSAvIFxuICAgIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbiMgZGVsYXllZCBmcm9tIGFycml2aW5nIGxhdGVcbmZsaWdodF9kYXRhX3BlcmNlbnQkTGF0ZV9BcnJpdmFsIDwtIFxuICBmbGlnaHRfZGF0YV9wZXJjZW50JGxhdGVfYWlyY3JhZnRfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwXG4jIGRlbGF5ZWQgYnkgY2FycmllclxuZmxpZ2h0X2RhdGFfcGVyY2VudCRDYXJyaWVyX0RlbGF5IDwtXG4gIGZsaWdodF9kYXRhX3BlcmNlbnQkY2Fycmllcl9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbiMgZGVsYXllZCBieSB3ZWF0aGVyXG5mbGlnaHRfZGF0YV9wZXJjZW50JFdlYXRoZXJfRGVsYXkgPC1cbiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRYLndlYXRoZXJfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwXG4jIGRlbGF5ZWQgYnkgTmF0aW9uYWwgQXZpYXRpb24gU3lzdGVtXG5mbGlnaHRfZGF0YV9wZXJjZW50JE5BUyA8LVxuICBmbGlnaHRfZGF0YV9wZXJjZW50JG5hc19jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbiMgZGVsYXllZCBieSBTZWN1cml0eVxuZmxpZ2h0X2RhdGFfcGVyY2VudCRTZWN1cml0eSA8LVxuICBmbGlnaHRfZGF0YV9wZXJjZW50JHNlY3VyaXR5X2N0IC8gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMFxuIyBDYW5jZWxsZWQgb3IgRGl2ZXJ0ZWRcbmZsaWdodF9kYXRhX3BlcmNlbnQkQ2FuY2VsbGVkX0RpdmVydGVkIDwtIFxuICAoZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfY2FuY2VsbGVkICsgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGl2ZXJ0ZWQpIC9cbiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMFxuICBcbiMgUmVtb3ZlIGNvbHVtbnMgbm8gbG9uZ2VyIHVzZWRcbmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkIDwtIHN1YnNldChmbGlnaHRfZGF0YV9wZXJjZW50LCBcbiAgICAgICAgICAgICAgICAgICAgICBzZWxlY3QgPSAtYyhhcnJfZmxpZ2h0cywgYXJyX2RlbDE1LCBjYXJyaWVyX2N0LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBYLndlYXRoZXJfY3QsIG5hc19jdCwgc2VjdXJpdHlfY3QsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxhdGVfYWlyY3JhZnRfY3QsIGFycl9jYW5jZWxsZWQsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFycl9kaXZlcnRlZCkpXG4jIE5vdCBhbGwgeWVhcnMgYXJlIHByZXNlbnQgZm9yIGVhY2ggYWlybGluZVxuIyBDcmVhdGUgcm93cyBmb3IgY2FycmllcnMgdGhhdCBoYWQgbm8gZGF0YSBmb3IgdGhhdCB5ZWFyIChmaWxsIHdpdGggMCdzKVxuY2F0ZWdvcmllcyA8LSBjKCdPbiBUaW1lJywgJ0xhdGUgQXJyaXZhbCcsICdDYW5jZWxsZWQgLyBEaXZlcnRlZCcsIFxuICAgICAgICAgICAgICAgICdDYXJyaWVyIERlbGF5JywgJ05hdGlvbmFsIEF2YWlhdGlvbiBTeXN0ZW0gRGVsYXknLCBcbiAgICAgICAgICAgICAgICAnU2VjdXJpdHkgRGVsYXknLCAnV2VhdGhlciBEZWxheScpXG4jIGdlbmVyYXRlIHRhYmxlIHdpdGggYWxsIHllYXJzIHdhbnRlZCBieSB1bmlxdWUgY2FycmllciBuYW1lc1xueV9leHBhbmQgPC0gZXhwYW5kLmdyaWQoeWVhciA9IDIwMDM6MjAxNywgY2Fycmllcl9uYW1lID0gXG4gICAgICAgICAgICAgICAgICAgICAgICAgIHVuaXF1ZShmbGlnaHRfZGF0YV9wZXJjZW50JGNhcnJpZXJfbmFtZSksXG4gICAgICAgICAgICAgICAgICAgICAgICBDYXRlZ29yeSA9IGNhdGVnb3JpZXMsXG4gICAgICAgICAgICAgICAgICAgICAgICBWYWx1ZSA9IDApXG4jIGZpbGwgaW4gbWlzc2luZyByb3dzIGFuZCBtYWtlIE4vQSB2YWx1ZXMgemVybyBcbmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkIDwtIG1lcmdlKGZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeV9leHBhbmQsIGFsbCA9IFRSVUUpXG5mbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZFtpcy5uYShmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZCldIDwtIDBcbiMgY2hhbmdlIHRvIHNob3J0ZXIgbmFtZSBmb3IgY2FsY3VsYXRpb24gcmVhZGliaWxpdHlcbmRmIDwtIGZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkXG4jIEFzc2lnbiB2YWx1ZXMgYnkgQ2F0ZWdvcnlcbmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09IFwiT24gVGltZVwiKV0gPC0gXG4gIGRmJE9uX1RpbWVbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gXCJPbiBUaW1lXCIpXVxuZGYkVmFsdWVbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ0xhdGUgQXJyaXZhbCcpXSA8LSBcbiAgZGYkTGF0ZV9BcnJpdmFsW3doaWNoKGRmJENhdGVnb3J5ID09ICdMYXRlIEFycml2YWwnKV1cbmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICdDYW5jZWxsZWQgLyBEaXZlcnRlZCcpXSA8LSBcbiAgZGYkQ2FuY2VsbGVkX0RpdmVydGVkW3doaWNoKGRmJENhdGVnb3J5ID09ICdDYW5jZWxsZWQgLyBEaXZlcnRlZCcpXVxuZGYkVmFsdWVbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ0NhcnJpZXIgRGVsYXknKV0gPC0gXG4gIGRmJENhcnJpZXJfRGVsYXlbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ0NhcnJpZXIgRGVsYXknKV1cbmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICdOYXRpb25hbCBBdmFpYXRpb24gU3lzdGVtIERlbGF5JyldIDwtIFxuICBkZiROQVNbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ05hdGlvbmFsIEF2YWlhdGlvbiBTeXN0ZW0gRGVsYXknKV1cbmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICdTZWN1cml0eSBEZWxheScpXSA8LSBcbiAgZGYkU2VjdXJpdHlbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ1NlY3VyaXR5IERlbGF5JyldXG5kZiRWYWx1ZVt3aGljaChkZiRDYXRlZ29yeSA9PSAnV2VhdGhlciBEZWxheScpXSA8LSBcbiAgZGYkV2VhdGhlcl9EZWxheVt3aGljaChkZiRDYXRlZ29yeSA9PSAnV2VhdGhlciBEZWxheScpXVxuIyBSZW1vdmUgY29sdW1ucyBubyBsb25nZXIgdXNlZFxuZGYgPC0gc3Vic2V0KGRmLCBzZWxlY3QgPSAtYyhPbl9UaW1lLCBMYXRlX0Fycml2YWwsIENhbmNlbGxlZF9EaXZlcnRlZCxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ2Fycmllcl9EZWxheSwgTkFTLCBTZWN1cml0eSwgV2VhdGhlcl9EZWxheSkpXG5kZiR5ZWFyIDwtIGZhY3RvcihkZiR5ZWFyKVxubGV2ZWxzKGRmJGNhcnJpZXJfbmFtZSlbbGV2ZWxzKGRmJGNhcnJpZXJfbmFtZSkgPT0gJ0FUQSBBaXJsaW5lcyBkL2IvYSBBVEEnXSA8LSAnQVRBIEFpcmxpbmVzJ1xuI2RmJGNhcnJpZXJfbmFtZVt3aGljaChkZiRjYXJyaWVyX25hbWUgPT0gJ0FUQSBBaXJsaW5lcyBkL2IvYSBBVEEnKV0gPC0gYyhBVEEgQWlybGluZXMpXG5zdHIoZGYpXG5gYGAifQ== -->
 <pre class="r"><code># Set the working Directory
 setwd(&quot;/home/david/Desktop/DataAnalysisProjects/FlightDelays&quot;)
 # Read in Data
-flight_data_full = read.csv('data/flight_2003_2017.csv', header = TRUE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUYWtlIG91dCB1bnVzZWQgdmFyaWFibGVzXG5mbGlnaHRfZGF0YSA8LSBzdWJzZXQoZmxpZ2h0X2RhdGFfZnVsbCwgXG4gICAgICAgICAgICAgICAgICAgICAgc2VsZWN0ID0gLWMoWC5tb250aCwgYWlycG9ydCwgYWlycG9ydF9uYW1lLCBYLmFycl9kZWxheSwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWC5jYXJyaWVyX2RlbGF5LCB3ZWF0aGVyX2RlbGF5LCBuYXNfZGVsYXksIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlY3VyaXR5X2RlbGF5LCBsYXRlX2FpcmNyYWZ0X2RlbGF5LCBYLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXJyaWVyKSlcbiMgS2VlcCB5ZWFyIGFuZCBjYXJyaWVyX25hbWUgYW5kIHN1bSBhbGwgc2ltaWxhciBjb2x1bW5zXG5mbGlnaHRfZGF0YV9zaGFwZWQgPC0gYWdncmVnYXRlKC5+eWVhcitjYXJyaWVyX25hbWUsIGZsaWdodF9kYXRhLCBzdW0pXG5gYGAifQ== -->
-<pre class="r"><code># Take out unused variables
+flight_data_full = read.csv('data/flight_2003_2017.csv', header = TRUE)
+# Take out unused variables
 flight_data &lt;- subset(flight_data_full, 
                       select = -c(X.month, airport, airport_name, X.arr_delay, 
                                   X.carrier_delay, weather_delay, nas_delay, 
                                   security_delay, late_aircraft_delay, X, 
                                   carrier))
 # Keep year and carrier_name and sum all similar columns
-flight_data_shaped &lt;- aggregate(.~year+carrier_name, flight_data, sum)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmxpZ2h0X2RhdGFfcGVyY2VudCA8LSBmbGlnaHRfZGF0YV9zaGFwZWRcbmZsaWdodF9kYXRhX3BlcmNlbnQkT25fVGltZSA8LSBcbiAgKGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgLSBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9kZWwxNSAtIFxuICAgICBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9jYW5jZWxsZWQgLSBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9kaXZlcnRlZCApIC8gXG4gICAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMFxuZmxpZ2h0X2RhdGFfcGVyY2VudCRMYXRlX0Fycml2YWwgPC0gXG4gIGZsaWdodF9kYXRhX3BlcmNlbnQkbGF0ZV9haXJjcmFmdF9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbmZsaWdodF9kYXRhX3BlcmNlbnQkQ2Fycmllcl9EZWxheSA8LVxuICBmbGlnaHRfZGF0YV9wZXJjZW50JGNhcnJpZXJfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwXG5mbGlnaHRfZGF0YV9wZXJjZW50JFdlYXRoZXJfRGVsYXkgPC1cbiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRYLndlYXRoZXJfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwXG5mbGlnaHRfZGF0YV9wZXJjZW50JE5BUyA8LVxuICBmbGlnaHRfZGF0YV9wZXJjZW50JG5hc19jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbmZsaWdodF9kYXRhX3BlcmNlbnQkU2VjdXJpdHkgPC1cbiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRzZWN1cml0eV9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDBcbmZsaWdodF9kYXRhX3BlcmNlbnQkQ2FuY2VsbGVkX0RpdmVydGVkIDwtIFxuICAoZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfY2FuY2VsbGVkICsgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGl2ZXJ0ZWQpIC9cbiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMFxuICBcbmBgYCJ9 -->
-<pre class="r"><code>flight_data_percent &lt;- flight_data_shaped
+flight_data_shaped &lt;- aggregate(.~year+carrier_name, flight_data, sum)
+# Generate functions to find percents for specific variables
+flight_data_percent &lt;- flight_data_shaped
+# Carriers on_time
 flight_data_percent$On_Time &lt;- 
   (flight_data_percent$arr_flights - flight_data_percent$arr_del15 - 
      flight_data_percent$arr_cancelled - flight_data_percent$arr_diverted ) / 
     flight_data_percent$arr_flights * 100
+# delayed from arriving late
 flight_data_percent$Late_Arrival &lt;- 
   flight_data_percent$late_aircraft_ct / flight_data_percent$arr_flights * 100
+# delayed by carrier
 flight_data_percent$Carrier_Delay &lt;-
   flight_data_percent$carrier_ct / flight_data_percent$arr_flights * 100
+# delayed by weather
 flight_data_percent$Weather_Delay &lt;-
   flight_data_percent$X.weather_ct / flight_data_percent$arr_flights * 100
+# delayed by National Aviation System
 flight_data_percent$NAS &lt;-
   flight_data_percent$nas_ct / flight_data_percent$arr_flights * 100
+# delayed by Security
 flight_data_percent$Security &lt;-
   flight_data_percent$security_ct / flight_data_percent$arr_flights * 100
+# Cancelled or Diverted
 flight_data_percent$Cancelled_Diverted &lt;- 
   (flight_data_percent$arr_cancelled + flight_data_percent$arr_diverted) /
   flight_data_percent$arr_flights * 100
-  </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmxpZ2h0X2RhdGFfcGVyY2VudF9zaGFwZWQgPC0gc3Vic2V0KGZsaWdodF9kYXRhX3BlcmNlbnQsIFxuICAgICAgICAgICAgICAgICAgICAgIHNlbGVjdCA9IC1jKGFycl9mbGlnaHRzLCBhcnJfZGVsMTUsIGNhcnJpZXJfY3QsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFgud2VhdGhlcl9jdCwgbmFzX2N0LCBzZWN1cml0eV9jdCwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGF0ZV9haXJjcmFmdF9jdCwgYXJyX2NhbmNlbGxlZCwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYXJyX2RpdmVydGVkKSlcbmBgYCJ9 -->
-<pre class="r"><code>flight_data_percent_shaped &lt;- subset(flight_data_percent, 
+  
+# Remove columns no longer used
+flight_data_percent_shaped &lt;- subset(flight_data_percent, 
                       select = -c(arr_flights, arr_del15, carrier_ct, 
                                   X.weather_ct, nas_ct, security_ct, 
                                   late_aircraft_ct, arr_cancelled, 
-                                  arr_diverted))</code></pre>
+                                  arr_diverted))
+# Not all years are present for each airline
+# Create rows for carriers that had no data for that year (fill with 0's)
+categories &lt;- c('On Time', 'Late Arrival', 'Cancelled / Diverted', 
+                'Carrier Delay', 'National Avaiation System Delay', 
+                'Security Delay', 'Weather Delay')
+# generate table with all years wanted by unique carrier names
+y_expand &lt;- expand.grid(year = 2003:2017, carrier_name = 
+                          unique(flight_data_percent$carrier_name),
+                        Category = categories,
+                        Value = 0)
+# fill in missing rows and make N/A values zero 
+flight_data_percent_shaped &lt;- merge(flight_data_percent_shaped,
+                                    y_expand, all = TRUE)
+flight_data_percent_shaped[is.na(flight_data_percent_shaped)] &lt;- 0
+# change to shorter name for calculation readibility
+df &lt;- flight_data_percent_shaped
+# Assign values by Category
+df$Value[which(df$Category == &quot;On Time&quot;)] &lt;- 
+  df$On_Time[which(df$Category == &quot;On Time&quot;)]
+df$Value[which(df$Category == 'Late Arrival')] &lt;- 
+  df$Late_Arrival[which(df$Category == 'Late Arrival')]
+df$Value[which(df$Category == 'Cancelled / Diverted')] &lt;- 
+  df$Cancelled_Diverted[which(df$Category == 'Cancelled / Diverted')]
+df$Value[which(df$Category == 'Carrier Delay')] &lt;- 
+  df$Carrier_Delay[which(df$Category == 'Carrier Delay')]
+df$Value[which(df$Category == 'National Avaiation System Delay')] &lt;- 
+  df$NAS[which(df$Category == 'National Avaiation System Delay')]
+df$Value[which(df$Category == 'Security Delay')] &lt;- 
+  df$Security[which(df$Category == 'Security Delay')]
+df$Value[which(df$Category == 'Weather Delay')] &lt;- 
+  df$Weather_Delay[which(df$Category == 'Weather Delay')]
+# Remove columns no longer used
+df &lt;- subset(df, select = -c(On_Time, Late_Arrival, Cancelled_Diverted,
+                             Carrier_Delay, NAS, Security, Weather_Delay))
+df$year &lt;- factor(df$year)
+levels(df$carrier_name)[levels(df$carrier_name) == 'ATA Airlines d/b/a ATA'] &lt;- 'ATA Airlines'
+#df$carrier_name[which(df$carrier_name == 'ATA Airlines d/b/a ATA')] &lt;- c(ATA Airlines)
+str(df)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDcmVhdGUgcm93cyBvZiB2YWx1ZXMgMCBmb3IgY2FycmllcnMgdGhhdCBoYWQgbm8gZGF0YSBmb3IgdGhhdCB5ZWFyXG51bmlxdWUoZmxpZ2h0X2RhdGFfcGVyY2VudCRjYXJyaWVyX25hbWUpXG5gYGAifQ== -->
-<pre class="r"><code># Create rows of values 0 for carriers that had no data for that year
-unique(flight_data_percent$carrier_name)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBBaXJUcmFuIEFpcndheXMgQ29ycG9yYXRpb24gIEFsYXNrYSBBaXJsaW5lcyBJbmMuICAgICAgICAgQWxvaGEgQWlybGluZXMgSW5jLiAgICAgICAgICBBbWVyaWNhbiBBaXJsaW5lcyBJbmMuICAgICAgIEFtZXJpY2FuIEVhZ2xlIEFpcmxpbmVzIEluYy5cbiBbNl0gQW1lcmljYSBXZXN0IEFpcmxpbmVzIEluYy4gICBBVEEgQWlybGluZXMgZC9iL2EgQVRBICAgICAgIEF0bGFudGljIENvYXN0IEFpcmxpbmVzICAgICAgQXRsYW50aWMgU291dGhlYXN0IEFpcmxpbmVzICBDb21haXIgSW5jLiAgICAgICAgICAgICAgICAgXG5bMTFdIENvbnRpbmVudGFsIEFpciBMaW5lcyBJbmMuICAgRGVsdGEgQWlyIExpbmVzIEluYy4gICAgICAgICBFbmRlYXZvciBBaXIgSW5jLiAgICAgICAgICAgIEVudm95IEFpciAgICAgICAgICAgICAgICAgICAgRXhwcmVzc0pldCBBaXJsaW5lcyBJbmMuICAgIFxuWzE2XSBGcm9udGllciBBaXJsaW5lcyBJbmMuICAgICAgIEhhd2FpaWFuIEFpcmxpbmVzIEluYy4gICAgICAgSW5kZXBlbmRlbmNlIEFpciAgICAgICAgICAgICBKZXRCbHVlIEFpcndheXMgICAgICAgICAgICAgIE1lc2EgQWlybGluZXMgSW5jLiAgICAgICAgICBcblsyMV0gTm9ydGh3ZXN0IEFpcmxpbmVzIEluYy4gICAgICBQaW5uYWNsZSBBaXJsaW5lcyBJbmMuICAgICAgIFNreVdlc3QgQWlybGluZXMgSW5jLiAgICAgICAgU291dGh3ZXN0IEFpcmxpbmVzIENvLiAgICAgICBTcGlyaXQgQWlyIExpbmVzICAgICAgICAgICAgXG5bMjZdIFVuaXRlZCBBaXIgTGluZXMgSW5jLiAgICAgICAgVVMgQWlyd2F5cyBJbmMuICAgICAgICAgICAgICBWaXJnaW4gQW1lcmljYSAgICAgICAgICAgICAgXG4yOCBMZXZlbHM6IEFpclRyYW4gQWlyd2F5cyBDb3Jwb3JhdGlvbiBBbGFza2EgQWlybGluZXMgSW5jLiBBbG9oYSBBaXJsaW5lcyBJbmMuIEFtZXJpY2FuIEFpcmxpbmVzIEluYy4gQW1lcmljYW4gRWFnbGUgQWlybGluZXMgSW5jLiAuLi4gVmlyZ2luIEFtZXJpY2FcbiJ9 -->
-<pre><code> [1] AirTran Airways Corporation  Alaska Airlines Inc.         Aloha Airlines Inc.          American Airlines Inc.       American Eagle Airlines Inc.
- [6] America West Airlines Inc.   ATA Airlines d/b/a ATA       Atlantic Coast Airlines      Atlantic Southeast Airlines  Comair Inc.                 
-[11] Continental Air Lines Inc.   Delta Air Lines Inc.         Endeavor Air Inc.            Envoy Air                    ExpressJet Airlines Inc.    
-[16] Frontier Airlines Inc.       Hawaiian Airlines Inc.       Independence Air             JetBlue Airways              Mesa Airlines Inc.          
-[21] Northwest Airlines Inc.      Pinnacle Airlines Inc.       SkyWest Airlines Inc.        Southwest Airlines Co.       Spirit Air Lines            
-[26] United Air Lines Inc.        US Airways Inc.              Virgin America              
-28 Levels: AirTran Airways Corporation Alaska Airlines Inc. Aloha Airlines Inc. American Airlines Inc. American Eagle Airlines Inc. ... Virgin America</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0Mjk0MCBvYnMuIG9mICA0IHZhcmlhYmxlczpcbiAkIHllYXIgICAgICAgIDogRmFjdG9yIHcvIDE1IGxldmVscyBcIjIwMDNcIixcIjIwMDRcIiwuLjogMSAxIDEgMSAxIDEgMSAxIDEgMSAuLi5cbiAkIGNhcnJpZXJfbmFtZTogRmFjdG9yIHcvIDI4IGxldmVscyBcIkFpclRyYW4gQWlyd2F5cyBDb3Jwb3JhdGlvblwiLC4uOiAxIDEgMSAxIDEgMSAxIDIgMiAyIC4uLlxuICQgQ2F0ZWdvcnkgICAgOiBGYWN0b3Igdy8gNyBsZXZlbHMgXCJPbiBUaW1lXCIsXCJMYXRlIEFycml2YWxcIiwuLjogNCA3IDUgMyA2IDIgMSA0IDUgMyAuLi5cbiAkIFZhbHVlICAgICAgIDogbnVtICAzLjQ3MSAwLjM1NyA5LjY3MiAxLjA4NSAwIC4uLlxuIn0= -->
+<pre><code>'data.frame':   2940 obs. of  4 variables:
+ $ year        : Factor w/ 15 levels &quot;2003&quot;,&quot;2004&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ carrier_name: Factor w/ 28 levels &quot;AirTran Airways Corporation&quot;,..: 1 1 1 1 1 1 1 2 2 2 ...
+ $ Category    : Factor w/ 7 levels &quot;On Time&quot;,&quot;Late Arrival&quot;,..: 4 7 5 3 6 2 1 4 5 3 ...
+ $ Value       : num  3.471 0.357 9.672 1.085 0 ...</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueV9leHBhbmQgPC0gZXhwYW5kLmdyaWQoeWVhciA9IDIwMDM6MjAxNywgY2Fycmllcl9uYW1lID0gdW5pcXVlKGZsaWdodF9kYXRhX3BlcmNlbnQkY2Fycmllcl9uYW1lKSlcbmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkIDwtIG1lcmdlKGZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkLCB5X2V4cGFuZCwgYWxsID0gVFJVRSlcbmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkW2lzLm5hKGZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkKV0gPC0gMFxuYGBgIn0= -->
-<pre class="r"><code>y_expand &lt;- expand.grid(year = 2003:2017, carrier_name = unique(flight_data_percent$carrier_name))
-flight_data_percent_shaped &lt;- merge(flight_data_percent_shaped, y_expand, all = TRUE)
-flight_data_percent_shaped[is.na(flight_data_percent_shaped)] &lt;- 0</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBXcml0ZSB0byBjc3ZcbndyaXRlLmNzdihkZiwgZmlsZSA9IFwiZGF0YS9mbGlnaHRfZGF0YS5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code># Write to csv
+write.csv(df, file = &quot;data/flight_data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CgojIFNldCB0aGUgd29ya2luZyBEaXJlY3RvcnkKc2V0d2QoIi9ob21lL2RhdmlkL0Rlc2t0b3AvRGF0YUFuYWx5c2lzUHJvamVjdHMvRmxpZ2h0RGVsYXlzIikKCiMgUmVhZCBpbiBEYXRhCmZsaWdodF9kYXRhX2Z1bGwgPSByZWFkLmNzdignZGF0YS9mbGlnaHRfMjAwM18yMDE3LmNzdicsIGhlYWRlciA9IFRSVUUpCgpgYGAKCgpgYGB7cn0KCiMgVGFrZSBvdXQgdW51c2VkIHZhcmlhYmxlcwpmbGlnaHRfZGF0YSA8LSBzdWJzZXQoZmxpZ2h0X2RhdGFfZnVsbCwgCiAgICAgICAgICAgICAgICAgICAgICBzZWxlY3QgPSAtYyhYLm1vbnRoLCBhaXJwb3J0LCBhaXJwb3J0X25hbWUsIFguYXJyX2RlbGF5LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFguY2Fycmllcl9kZWxheSwgd2VhdGhlcl9kZWxheSwgbmFzX2RlbGF5LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlY3VyaXR5X2RlbGF5LCBsYXRlX2FpcmNyYWZ0X2RlbGF5LCBYLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhcnJpZXIpKQoKIyBLZWVwIHllYXIgYW5kIGNhcnJpZXJfbmFtZSBhbmQgc3VtIGFsbCBzaW1pbGFyIGNvbHVtbnMKZmxpZ2h0X2RhdGFfc2hhcGVkIDwtIGFnZ3JlZ2F0ZSgufnllYXIrY2Fycmllcl9uYW1lLCBmbGlnaHRfZGF0YSwgc3VtKQpgYGAKCgpgYGB7cn0KIyBHZW5lcmF0ZSBmdW5jdGlvbnMgdG8gZmluZCBwZXJjZW50cyBmb3Igc3BlY2lmaWMgdmFyaWFibGVzCgpmbGlnaHRfZGF0YV9wZXJjZW50IDwtIGZsaWdodF9kYXRhX3NoYXBlZAoKIyBDYXJyaWVycyBvbl90aW1lCmZsaWdodF9kYXRhX3BlcmNlbnQkT25fVGltZSA8LSAKICAoZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAtIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2RlbDE1IC0gCiAgICAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfY2FuY2VsbGVkIC0gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGl2ZXJ0ZWQgKSAvIAogICAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMAoKIyBkZWxheWVkIGZyb20gYXJyaXZpbmcgbGF0ZQpmbGlnaHRfZGF0YV9wZXJjZW50JExhdGVfQXJyaXZhbCA8LSAKICBmbGlnaHRfZGF0YV9wZXJjZW50JGxhdGVfYWlyY3JhZnRfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwCgojIGRlbGF5ZWQgYnkgY2FycmllcgpmbGlnaHRfZGF0YV9wZXJjZW50JENhcnJpZXJfRGVsYXkgPC0KICBmbGlnaHRfZGF0YV9wZXJjZW50JGNhcnJpZXJfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwCgojIGRlbGF5ZWQgYnkgd2VhdGhlcgpmbGlnaHRfZGF0YV9wZXJjZW50JFdlYXRoZXJfRGVsYXkgPC0KICBmbGlnaHRfZGF0YV9wZXJjZW50JFgud2VhdGhlcl9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDAKCmZsaWdodF9kYXRhX3BlcmNlbnQkTkFTIDwtCiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRuYXNfY3QgLyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwCgpmbGlnaHRfZGF0YV9wZXJjZW50JFNlY3VyaXR5IDwtCiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRzZWN1cml0eV9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDAKCmZsaWdodF9kYXRhX3BlcmNlbnQkQ2FuY2VsbGVkX0RpdmVydGVkIDwtIAogIChmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9jYW5jZWxsZWQgKyBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9kaXZlcnRlZCkgLwogIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDAKICAKYGBgCgpgYGB7cn0KCmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkIDwtIHN1YnNldChmbGlnaHRfZGF0YV9wZXJjZW50LCAKICAgICAgICAgICAgICAgICAgICAgIHNlbGVjdCA9IC1jKGFycl9mbGlnaHRzLCBhcnJfZGVsMTUsIGNhcnJpZXJfY3QsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWC53ZWF0aGVyX2N0LCBuYXNfY3QsIHNlY3VyaXR5X2N0LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxhdGVfYWlyY3JhZnRfY3QsIGFycl9jYW5jZWxsZWQsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYXJyX2RpdmVydGVkKSkKYGBgCgpgYGB7cn0KCiMgQ3JlYXRlIHJvd3Mgb2YgdmFsdWVzIDAgZm9yIGNhcnJpZXJzIHRoYXQgaGFkIG5vIGRhdGEgZm9yIHRoYXQgeWVhcgoKdW5pcXVlKGZsaWdodF9kYXRhX3BlcmNlbnQkY2Fycmllcl9uYW1lKQp5X2V4cGFuZCA8LSBleHBhbmQuZ3JpZCh5ZWFyID0gMjAwMzoyMDE3LCBjYXJyaWVyX25hbWUgPSB1bmlxdWUoZmxpZ2h0X2RhdGFfcGVyY2VudCRjYXJyaWVyX25hbWUpKQpmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZCA8LSBtZXJnZShmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZCwgeV9leHBhbmQsIGFsbCA9IFRSVUUpCmZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkW2lzLm5hKGZsaWdodF9kYXRhX3BlcmNlbnRfc2hhcGVkKV0gPC0gMAoKCmBgYAoKYGBge3J9CgoKCgpgYGAKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CgojIFNldCB0aGUgd29ya2luZyBEaXJlY3RvcnkKc2V0d2QoIi9ob21lL2RhdmlkL0Rlc2t0b3AvRGF0YUFuYWx5c2lzUHJvamVjdHMvRmxpZ2h0RGVsYXlzIikKCiMgUmVhZCBpbiBEYXRhCmZsaWdodF9kYXRhX2Z1bGwgPSByZWFkLmNzdignZGF0YS9mbGlnaHRfMjAwM18yMDE3LmNzdicsIGhlYWRlciA9IFRSVUUpCgoKIyBUYWtlIG91dCB1bnVzZWQgdmFyaWFibGVzCmZsaWdodF9kYXRhIDwtIHN1YnNldChmbGlnaHRfZGF0YV9mdWxsLCAKICAgICAgICAgICAgICAgICAgICAgIHNlbGVjdCA9IC1jKFgubW9udGgsIGFpcnBvcnQsIGFpcnBvcnRfbmFtZSwgWC5hcnJfZGVsYXksIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWC5jYXJyaWVyX2RlbGF5LCB3ZWF0aGVyX2RlbGF5LCBuYXNfZGVsYXksIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VjdXJpdHlfZGVsYXksIGxhdGVfYWlyY3JhZnRfZGVsYXksIFgsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FycmllcikpCgojIEtlZXAgeWVhciBhbmQgY2Fycmllcl9uYW1lIGFuZCBzdW0gYWxsIHNpbWlsYXIgY29sdW1ucwpmbGlnaHRfZGF0YV9zaGFwZWQgPC0gYWdncmVnYXRlKC5+eWVhcitjYXJyaWVyX25hbWUsIGZsaWdodF9kYXRhLCBzdW0pCgojIEdlbmVyYXRlIGZ1bmN0aW9ucyB0byBmaW5kIHBlcmNlbnRzIGZvciBzcGVjaWZpYyB2YXJpYWJsZXMKCmZsaWdodF9kYXRhX3BlcmNlbnQgPC0gZmxpZ2h0X2RhdGFfc2hhcGVkCgojIENhcnJpZXJzIG9uX3RpbWUKZmxpZ2h0X2RhdGFfcGVyY2VudCRPbl9UaW1lIDwtIAogIChmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzIC0gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZGVsMTUgLSAKICAgICBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9jYW5jZWxsZWQgLSBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9kaXZlcnRlZCApIC8gCiAgICBmbGlnaHRfZGF0YV9wZXJjZW50JGFycl9mbGlnaHRzICogMTAwCgojIGRlbGF5ZWQgZnJvbSBhcnJpdmluZyBsYXRlCmZsaWdodF9kYXRhX3BlcmNlbnQkTGF0ZV9BcnJpdmFsIDwtIAogIGZsaWdodF9kYXRhX3BlcmNlbnQkbGF0ZV9haXJjcmFmdF9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDAKCiMgZGVsYXllZCBieSBjYXJyaWVyCmZsaWdodF9kYXRhX3BlcmNlbnQkQ2Fycmllcl9EZWxheSA8LQogIGZsaWdodF9kYXRhX3BlcmNlbnQkY2Fycmllcl9jdCAvIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2ZsaWdodHMgKiAxMDAKCiMgZGVsYXllZCBieSB3ZWF0aGVyCmZsaWdodF9kYXRhX3BlcmNlbnQkV2VhdGhlcl9EZWxheSA8LQogIGZsaWdodF9kYXRhX3BlcmNlbnQkWC53ZWF0aGVyX2N0IC8gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMAoKIyBkZWxheWVkIGJ5IE5hdGlvbmFsIEF2aWF0aW9uIFN5c3RlbQpmbGlnaHRfZGF0YV9wZXJjZW50JE5BUyA8LQogIGZsaWdodF9kYXRhX3BlcmNlbnQkbmFzX2N0IC8gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMAoKIyBkZWxheWVkIGJ5IFNlY3VyaXR5CmZsaWdodF9kYXRhX3BlcmNlbnQkU2VjdXJpdHkgPC0KICBmbGlnaHRfZGF0YV9wZXJjZW50JHNlY3VyaXR5X2N0IC8gZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMAoKIyBDYW5jZWxsZWQgb3IgRGl2ZXJ0ZWQKZmxpZ2h0X2RhdGFfcGVyY2VudCRDYW5jZWxsZWRfRGl2ZXJ0ZWQgPC0gCiAgKGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2NhbmNlbGxlZCArIGZsaWdodF9kYXRhX3BlcmNlbnQkYXJyX2RpdmVydGVkKSAvCiAgZmxpZ2h0X2RhdGFfcGVyY2VudCRhcnJfZmxpZ2h0cyAqIDEwMAogIAoKIyBSZW1vdmUgY29sdW1ucyBubyBsb25nZXIgdXNlZApmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZCA8LSBzdWJzZXQoZmxpZ2h0X2RhdGFfcGVyY2VudCwgCiAgICAgICAgICAgICAgICAgICAgICBzZWxlY3QgPSAtYyhhcnJfZmxpZ2h0cywgYXJyX2RlbDE1LCBjYXJyaWVyX2N0LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFgud2VhdGhlcl9jdCwgbmFzX2N0LCBzZWN1cml0eV9jdCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYXRlX2FpcmNyYWZ0X2N0LCBhcnJfY2FuY2VsbGVkLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFycl9kaXZlcnRlZCkpCgoKIyBOb3QgYWxsIHllYXJzIGFyZSBwcmVzZW50IGZvciBlYWNoIGFpcmxpbmUKIyBDcmVhdGUgcm93cyBmb3IgY2FycmllcnMgdGhhdCBoYWQgbm8gZGF0YSBmb3IgdGhhdCB5ZWFyIChmaWxsIHdpdGggMCdzKQoKY2F0ZWdvcmllcyA8LSBjKCdPbiBUaW1lJywgJ0xhdGUgQXJyaXZhbCcsICdDYW5jZWxsZWQgLyBEaXZlcnRlZCcsIAogICAgICAgICAgICAgICAgJ0NhcnJpZXIgRGVsYXknLCAnTmF0aW9uYWwgQXZhaWF0aW9uIFN5c3RlbSBEZWxheScsIAogICAgICAgICAgICAgICAgJ1NlY3VyaXR5IERlbGF5JywgJ1dlYXRoZXIgRGVsYXknKQoKCgoKIyBnZW5lcmF0ZSB0YWJsZSB3aXRoIGFsbCB5ZWFycyB3YW50ZWQgYnkgdW5pcXVlIGNhcnJpZXIgbmFtZXMKeV9leHBhbmQgPC0gZXhwYW5kLmdyaWQoeWVhciA9IDIwMDM6MjAxNywgY2Fycmllcl9uYW1lID0gCiAgICAgICAgICAgICAgICAgICAgICAgICAgdW5pcXVlKGZsaWdodF9kYXRhX3BlcmNlbnQkY2Fycmllcl9uYW1lKSwKICAgICAgICAgICAgICAgICAgICAgICAgQ2F0ZWdvcnkgPSBjYXRlZ29yaWVzLAogICAgICAgICAgICAgICAgICAgICAgICBWYWx1ZSA9IDApCgojIGZpbGwgaW4gbWlzc2luZyByb3dzIGFuZCBtYWtlIE4vQSB2YWx1ZXMgemVybyAKZmxpZ2h0X2RhdGFfcGVyY2VudF9zaGFwZWQgPC0gbWVyZ2UoZmxpZ2h0X2RhdGFfcGVyY2VudF9zaGFwZWQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHlfZXhwYW5kLCBhbGwgPSBUUlVFKQpmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZFtpcy5uYShmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZCldIDwtIDAKCgoKIyBjaGFuZ2UgdG8gc2hvcnRlciBuYW1lIGZvciBjYWxjdWxhdGlvbiByZWFkaWJpbGl0eQpkZiA8LSBmbGlnaHRfZGF0YV9wZXJjZW50X3NoYXBlZAoKIyBBc3NpZ24gdmFsdWVzIGJ5IENhdGVnb3J5CmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICJPbiBUaW1lIildIDwtIAogIGRmJE9uX1RpbWVbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gIk9uIFRpbWUiKV0KZGYkVmFsdWVbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ0xhdGUgQXJyaXZhbCcpXSA8LSAKICBkZiRMYXRlX0Fycml2YWxbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ0xhdGUgQXJyaXZhbCcpXQpkZiRWYWx1ZVt3aGljaChkZiRDYXRlZ29yeSA9PSAnQ2FuY2VsbGVkIC8gRGl2ZXJ0ZWQnKV0gPC0gCiAgZGYkQ2FuY2VsbGVkX0RpdmVydGVkW3doaWNoKGRmJENhdGVnb3J5ID09ICdDYW5jZWxsZWQgLyBEaXZlcnRlZCcpXQpkZiRWYWx1ZVt3aGljaChkZiRDYXRlZ29yeSA9PSAnQ2FycmllciBEZWxheScpXSA8LSAKICBkZiRDYXJyaWVyX0RlbGF5W3doaWNoKGRmJENhdGVnb3J5ID09ICdDYXJyaWVyIERlbGF5JyldCmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICdOYXRpb25hbCBBdmFpYXRpb24gU3lzdGVtIERlbGF5JyldIDwtIAogIGRmJE5BU1t3aGljaChkZiRDYXRlZ29yeSA9PSAnTmF0aW9uYWwgQXZhaWF0aW9uIFN5c3RlbSBEZWxheScpXQpkZiRWYWx1ZVt3aGljaChkZiRDYXRlZ29yeSA9PSAnU2VjdXJpdHkgRGVsYXknKV0gPC0gCiAgZGYkU2VjdXJpdHlbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ1NlY3VyaXR5IERlbGF5JyldCmRmJFZhbHVlW3doaWNoKGRmJENhdGVnb3J5ID09ICdXZWF0aGVyIERlbGF5JyldIDwtIAogIGRmJFdlYXRoZXJfRGVsYXlbd2hpY2goZGYkQ2F0ZWdvcnkgPT0gJ1dlYXRoZXIgRGVsYXknKV0KCiMgUmVtb3ZlIGNvbHVtbnMgbm8gbG9uZ2VyIHVzZWQKZGYgPC0gc3Vic2V0KGRmLCBzZWxlY3QgPSAtYyhPbl9UaW1lLCBMYXRlX0Fycml2YWwsIENhbmNlbGxlZF9EaXZlcnRlZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDYXJyaWVyX0RlbGF5LCBOQVMsIFNlY3VyaXR5LCBXZWF0aGVyX0RlbGF5KSkKCiMgQ2hhbmdlIHllYXJzIGZyb20gaW50IHRvIGZhY3RvcgpkZiR5ZWFyIDwtIGZhY3RvcihkZiR5ZWFyKQoKIyByZW5hbWUgbGV2ZWwgZm9yIGxhdGVyIGdyYXBoaW5nIGVhc2UKbGV2ZWxzKGRmJGNhcnJpZXJfbmFtZSlbbGV2ZWxzKGRmJGNhcnJpZXJfbmFtZSkgPT0gJ0FUQSBBaXJsaW5lcyBkL2IvYSBBVEEnXSA8LSAnQVRBIEFpcmxpbmVzJwoKCgpgYGAKCgpgYGB7cn0KIyBXcml0ZSB0byBjc3YKd3JpdGUuY3N2KGRmLCBmaWxlID0gImRhdGEvZmxpZ2h0X2RhdGEuY3N2IikKCmBgYAoKCgoKCg==</div>
 
 
 
