@@ -1,0 +1,94 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+# Set the working Directory
+setwd("/home/david/Desktop/DataAnalysisProjects/FlightDelays")
+
+# Read in Data
+flight_data_full = read.csv('data/flight_2003_2017.csv', header = TRUE)
+
+```
+
+
+```{r}
+
+# Take out unused variables
+flight_data <- subset(flight_data_full, 
+                      select = -c(X.month, airport, airport_name, X.arr_delay, 
+                                  X.carrier_delay, weather_delay, nas_delay, 
+                                  security_delay, late_aircraft_delay, X, 
+                                  carrier))
+
+# Keep year and carrier_name and sum all similar columns
+flight_data_shaped <- aggregate(.~year+carrier_name, flight_data, sum)
+```
+
+
+```{r}
+# Generate functions to find percents for specific variables
+
+flight_data_percent <- flight_data_shaped
+
+# Carriers on_time
+flight_data_percent$On_Time <- 
+  (flight_data_percent$arr_flights - flight_data_percent$arr_del15 - 
+     flight_data_percent$arr_cancelled - flight_data_percent$arr_diverted ) / 
+    flight_data_percent$arr_flights * 100
+
+# delayed from arriving late
+flight_data_percent$Late_Arrival <- 
+  flight_data_percent$late_aircraft_ct / flight_data_percent$arr_flights * 100
+
+# delayed by carrier
+flight_data_percent$Carrier_Delay <-
+  flight_data_percent$carrier_ct / flight_data_percent$arr_flights * 100
+
+# delayed by weather
+flight_data_percent$Weather_Delay <-
+  flight_data_percent$X.weather_ct / flight_data_percent$arr_flights * 100
+
+flight_data_percent$NAS <-
+  flight_data_percent$nas_ct / flight_data_percent$arr_flights * 100
+
+flight_data_percent$Security <-
+  flight_data_percent$security_ct / flight_data_percent$arr_flights * 100
+
+flight_data_percent$Cancelled_Diverted <- 
+  (flight_data_percent$arr_cancelled + flight_data_percent$arr_diverted) /
+  flight_data_percent$arr_flights * 100
+  
+```
+
+```{r}
+
+flight_data_percent_shaped <- subset(flight_data_percent, 
+                      select = -c(arr_flights, arr_del15, carrier_ct, 
+                                  X.weather_ct, nas_ct, security_ct, 
+                                  late_aircraft_ct, arr_cancelled, 
+                                  arr_diverted))
+```
+
+```{r}
+
+# Create rows of values 0 for carriers that had no data for that year
+
+unique(flight_data_percent$carrier_name)
+y_expand <- expand.grid(year = 2003:2017, carrier_name = unique(flight_data_percent$carrier_name))
+flight_data_percent_shaped <- merge(flight_data_percent_shaped, y_expand, all = TRUE)
+flight_data_percent_shaped[is.na(flight_data_percent_shaped)] <- 0
+
+
+```
+
+```{r}
+
+
+
+
+```
+
+
