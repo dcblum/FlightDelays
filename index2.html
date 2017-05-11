@@ -1,0 +1,39 @@
+<html>
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 1300, 800);
+    d3.csv("data/flight_data.csv", function (data) {
+
+      // add chart of Data
+      var myChart = new dimple.chart(svg, data);
+      myChart.setBounds(130, 60, 1010, 610)
+
+      // set x variable
+      var x = myChart.addCategoryAxis("x", "Carrier Name");
+      x.addOrderRule("Carrier Name");
+      x.fontSize = 14;
+
+      // set y variable
+      var y = myChart.addMeasureAxis("y", "Value")
+      y.overrideMax = 100;
+      y.title = "Value [%]";
+      y.fontSize = 14;
+
+      myChart.addSeries("Category", dimple.plot.bar);
+
+      // Set animation by variable Year
+      var animate_over = myChart.setStoryboard('Year');
+      animate_over.fontSize = 14;
+
+      // Set legend
+      var legend = myChart.addLegend(280, 20, 1000, 40, "left");
+      legend.fontSize = 14;
+
+      myChart.draw();
+
+    });
+  </script>
+</div>
+</html>

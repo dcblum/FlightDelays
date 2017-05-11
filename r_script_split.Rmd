@@ -118,14 +118,16 @@ df$year <- factor(df$year)
 # rename level for later graphing ease
 levels(df$carrier_name)[levels(df$carrier_name) == 'ATA Airlines d/b/a ATA'] <- 'ATA Airlines'
 
-
+# rename carrier_name
+names(df)[names(df) == 'carrier_name'] <- 'Carrier Name'
+names(df)[names(df) == 'year'] <- 'Year'
 
 ```
 
 
 ```{r}
 # Write to csv
-write.csv(df, file = "data/flight_data.csv")
+write.csv(df, file = "data/flight_data.csv", row.names = FALSE)
 
 ```
 
