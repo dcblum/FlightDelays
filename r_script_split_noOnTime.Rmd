@@ -1,0 +1,137 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+# Set the working Directory
+setwd("/home/david/Desktop/DataAnalysisProjects/FlightDelays")
+
+# Read in Data
+flight_data_full = read.csv('data/flight_2003_2017.csv', header = TRUE)
+
+
+# Take out unused variables
+flight_data <- subset(flight_data_full, 
+                      select = -c(X.month, airport, airport_name, X.arr_delay, 
+                                  X.carrier_delay, weather_delay, nas_delay, 
+                                  security_delay, late_aircraft_delay, X, 
+                                  carrier))
+
+# Keep year and carrier_name and sum all similar columns
+flight_data_shaped <- aggregate(.~year+carrier_name, flight_data, sum)
+
+# Generate functions to find percents for specific variables
+
+flight_data_percent <- flight_data_shaped
+
+# Carriers on_time
+flight_data_percent$On_Time <- 
+  (flight_data_percent$arr_flights - flight_data_percent$arr_del15 - 
+     flight_data_percent$arr_cancelled - flight_data_percent$arr_diverted ) / 
+    flight_data_percent$arr_flights * 100
+
+# delayed from arriving late
+flight_data_percent$Late_Arrival <- 
+  flight_data_percent$late_aircraft_ct / flight_data_percent$arr_flights * 100
+
+# delayed by carrier
+flight_data_percent$Carrier_Delay <-
+  flight_data_percent$carrier_ct / flight_data_percent$arr_flights * 100
+
+# delayed by weather
+flight_data_percent$Weather_Delay <-
+  flight_data_percent$X.weather_ct / flight_data_percent$arr_flights * 100
+
+# delayed by National Aviation System
+flight_data_percent$NAS <-
+  flight_data_percent$nas_ct / flight_data_percent$arr_flights * 100
+
+# delayed by Security
+flight_data_percent$Security <-
+  flight_data_percent$security_ct / flight_data_percent$arr_flights * 100
+
+# Cancelled or Diverted
+flight_data_percent$Cancelled_Diverted <- 
+  (flight_data_percent$arr_cancelled + flight_data_percent$arr_diverted) /
+  flight_data_percent$arr_flights * 100
+  
+
+# Remove columns no longer used
+flight_data_percent_shaped <- subset(flight_data_percent, 
+                      select = -c(arr_flights, arr_del15, carrier_ct, 
+                                  X.weather_ct, nas_ct, security_ct, 
+                                  late_aircraft_ct, arr_cancelled, 
+                                  arr_diverted))
+
+
+# Not all years are present for each airline
+# Create rows for carriers that had no data for that year (fill with 0's)
+
+categories <- c('Late Arrival', 'Cancelled / Diverted', 
+                'Carrier Delay', 'National Avaiation System Delay', 
+                'Security Delay', 'Weather Delay')
+
+
+
+
+# generate table with all years wanted by unique carrier names
+y_expand <- expand.grid(carrier_name = 
+                          unique(flight_data_percent$carrier_name),
+                        Category = categories,
+                        Value = 0)
+
+# fill in missing rows and make N/A values zero 
+flight_data_percent_shaped <- merge(flight_data_percent_shaped,
+                                    y_expand, all = TRUE)
+flight_data_percent_shaped[is.na(flight_data_percent_shaped)] <- 0
+
+
+
+# change to shorter name for calculation readibility
+df <- flight_data_percent_shaped
+
+# Assign values by Category
+#df$Value[which(df$Category == "On Time")] <- 
+#  df$On_Time[which(df$Category == "On Time")]
+df$Value[which(df$Category == 'Late Arrival')] <- 
+  df$Late_Arrival[which(df$Category == 'Late Arrival')]
+df$Value[which(df$Category == 'Cancelled / Diverted')] <- 
+  df$Cancelled_Diverted[which(df$Category == 'Cancelled / Diverted')]
+df$Value[which(df$Category == 'Carrier Delay')] <- 
+  df$Carrier_Delay[which(df$Category == 'Carrier Delay')]
+df$Value[which(df$Category == 'National Avaiation System Delay')] <- 
+  df$NAS[which(df$Category == 'National Avaiation System Delay')]
+df$Value[which(df$Category == 'Security Delay')] <- 
+  df$Security[which(df$Category == 'Security Delay')]
+df$Value[which(df$Category == 'Weather Delay')] <- 
+  df$Weather_Delay[which(df$Category == 'Weather Delay')]
+
+# Remove columns no longer used
+df <- subset(df, select = -c(On_Time, Late_Arrival, Cancelled_Diverted,
+                             Carrier_Delay, NAS, Security, Weather_Delay))
+
+# Change years from int to factor
+df$year <- factor(df$year)
+
+# rename level for later graphing ease
+levels(df$carrier_name)[levels(df$carrier_name) == 'ATA Airlines d/b/a ATA'] <- 'ATA Airlines'
+
+# rename carrier_name
+names(df)[names(df) == 'carrier_name'] <- 'Carrier Name'
+names(df)[names(df) == 'year'] <- 'Year'
+
+```
+
+
+```{r}
+# Write to csv
+write.csv(df, file = "data/flight_data_value_delays.csv", row.names = FALSE)
+
+```
+
+
+
+
+
