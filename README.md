@@ -3,6 +3,8 @@
 The graph compares reasons of plane delay by carrier name from 2003
 to 2017. The time component also highlights when carriers were active.
 
+<br>
+
 # Design
 
 The dataset has a lot of information; the highlight to me was how carriers 
@@ -51,9 +53,23 @@ viewed (such as 'security').
 
 ### index4.html
 
+Because the 'On Time' Information was taking up most of the graph it was removed
+to help better understand delay reasons for each Carrier. The number of carriers
+in each data set is mapped on the selection for each year. 
+
+The only value so small it's _still_ difficult to view is 'Security'. I do not 
+see this as a problem because (with 'On Time' no longer part of the graph and
+a similar color to 'Security') the contrast with the smaller variables is more
+readily apparent.
+
+<br>
+
 # Feedback
 
+"Taking out 'On Time' values and viewing just Carrier delays is a lot more 
+intersting" - Amazing Person in My Life
 
+<br>
 
 # Resources
 
