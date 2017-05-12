@@ -128,13 +128,13 @@ $(document).ready(function () {
 <p>The dataset has a lot of information; the highlight to me was how carriers improved their ‘on time’ flights throughout the years.</p>
 <p>Initially all I wanted was a bar graph. The graph would showcase delay reason vs carrier name and could be interacted with on hover to view values.</p>
 <p>After filtering the data (at least I though I had) I noticed including an animation over the years would be an absolutely great idea. I got some help reorganizing my code to properly work with this idea.</p>
-<div id="index1.html" class="section level3">
-<h3>index1.html</h3>
+<div id="index1.html" class="section level4">
+<h4>1) index1.html</h4>
 <p>Initially designed to showcase I wrangled my data properly and was not intended as a final product. I really enjoy dimple’s automatic choice of colors and general layout. From this chart I decided to switch where I was to put years and lengend data.</p>
 <p>Although this chart is a total for all carriers, not all carriers existed from 2003 to 2017; a better representaion for comparing carriers by year is to animate the chart.</p>
 </div>
-<div id="index2.html" class="section level3">
-<h3>index2.html</h3>
+<div id="index2.html" class="section level4">
+<h4>2) index2.html</h4>
 <p>Animation more easily revealed when carriers were active. It was a lot of fun visually seeing which carriers were present for each year and how delay percentages would generally increase or decease for each carrier.</p>
 <p>Problems:</p>
 <ul>
@@ -143,13 +143,24 @@ $(document).ready(function () {
 <li>Not being able to easily compare values across carriers within the same year</li>
 </ul>
 </div>
-<div id="index3.html" class="section level3">
-<h3>index3.html</h3>
-<p>Being able to pause the animation and select specfic years greatly increases the readers ability to explore the data on their own! Being able to select non-concurrent allows for greater comparison.</p>
+<div id="index3.html" class="section level4">
+<h4>3) index3.html</h4>
+<p>Introducing the option to select years (thus pausing the chart) solved much of the earlier issues! Readers are more apt to interact with the dataset when they access to pause or change the animation.</p>
+<p>The main problem in this graph is some values are so small changes can’t be viewed (such as ‘security’).</p>
+</div>
+<div id="index_final.html" class="section level4">
+<h4>4) index_final.html</h4>
+<p>Because the ‘On Time’ Information was taking up most of the graph it was removed to help better understand delay reasons for each Carrier. The number of carriers in each data set is mapped on the selection for each year.</p>
+<p>The only value so small it’s <em>still</em> difficult to view is ‘Security’. I do not see this as a problem because (with ‘On Time’ no longer part of the graph and a similar color to ‘Security’) the contrast with the smaller variables is more readily apparent.</p>
+<p>A piece of feedback I recieved is being able to rearrange bars horizontally to more easily rank carriers. Although this is a great feature I feel having more moving parts would be very difficult for readers to understand.</p>
 </div>
 </div>
 <div id="feedback" class="section level1">
 <h1>Feedback</h1>
+<p>“Taking out ‘On Time’ values and viewing just Carrier delays is a lot more intersting” - Amazing Person in Life</p>
+<p>“Wow! There’s even a chart displaying the number of carriers; I like how the entire page is being used to display data!” - Renown Research Analyst</p>
+<p>“Looks like I chose the correct carrier for our trip!” - Occacional Flyer</p>
+<p><br></p>
 </div>
 <div id="resources" class="section level1">
 <h1>Resources</h1>
