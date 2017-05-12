@@ -3,8 +3,6 @@
 The graph compares reasons of plane delay by carrier name from 2003
 to 2017. The time component also highlights when carriers were active.
 
-<br>
-
 # Design
 
 The dataset has a lot of information; the highlight to me was how carriers 
@@ -40,7 +38,6 @@ Problems:
 * Not being able to pause 
 * Not being able to easily compare values across carriers within the same year
 
-
 #### 3) index3.html
 
 Introducing the option to select years (thus pausing the chart) solved much of
@@ -49,7 +46,6 @@ access to pause or change the animation.
 
 The main problem in this graph is some values are so small changes can't be 
 viewed (such as 'security').
-
 
 #### 4) index_final.html
 
@@ -75,21 +71,17 @@ see this as a problem because (with 'On Time' no longer part of the graph and
 a similar color to 'Security') the contrast with the smaller variables is more
 readily apparent.
 
-<br>
-
 # Feedback
 
 "Taking out 'On Time' values and viewing just Carrier delays is a lot more 
-<<<<<<< HEAD
 intersting" - Amazing Person in Life
 
 "Wow! There's even a chart displaying the number of carriers; I like how the 
 entire page is being used to display data!" - Renown Research Analyst
 
 "Looks like I chose the correct carrier for our trip!" - Occacional Flyer
-=======
-intersting" - Amazing Person in My Life
->>>>>>> master
+
+"I like the moving colors!" - Art Student
 
 <br>
 
