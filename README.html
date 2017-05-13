@@ -125,9 +125,14 @@ $(document).ready(function () {
 </div>
 <div id="design" class="section level1">
 <h1>Design</h1>
-<p>The dataset has a lot of information; the highlight to me was how carriers improved their ‘on time’ flights throughout the years.</p>
-<p>Initially all I wanted was a bar graph. The graph would showcase delay reason vs carrier name and could be interacted with on hover to view values.</p>
+<p>The dataset has a lot of information; the highlight to me was how carriers improved their ‘on time’ flights throughout the years. I considered including a map of the flights however the dataset did not include coordinates of the airports.</p>
 <p>After filtering the data (at least I though I had) I noticed including an animation over the years would be an absolutely great idea. I got some help reorganizing my code to properly work with this idea.</p>
+<p>Bar graphs are great at comparing between groups and observing values over time. Using a line chart or dot plot would not properly showcase related and unrelated variables as easily.</p>
+<p>The reason I chose carriers as the independent variable is because I wanted readers to focus mostly on the carriers and how they relate to each other.</p>
+<p>A summation of ‘Value’ by carrier is a great for the y-axis because it is dependent on the Carrier. Both axes could have been switched, however testing revealed right-aligned, vertically-stacked summation of Values was not easy to compare.</p>
+<p>The Value of each category per carrier is easily viewed on Mouse-Over. Viewers can pause the year by clicking on the desired year.</p>
+<p>Colors showcase different values of delay categories. These colors are defined via a legend placed above the graph. The legend is placed above the graph because the animation of year-buttons was more easily understood if placed on the right (years animated top to bottom).</p>
+<p>The buttons were initially designed all to be the same thickness; the thickness of the buttons being equal to the number of carriers was initially a mistake that was kept in the final chart. This allowed for easier understanding of the number of carriers throughout the years.</p>
 <div id="index1.html" class="section level4">
 <h4>1) index1.html</h4>
 <p>Initially designed to showcase I wrangled my data properly and was not intended as a final product. I really enjoy dimple’s automatic choice of colors and general layout. From this chart I decided to switch where I was to put years and legend data.</p>
@@ -148,13 +153,22 @@ $(document).ready(function () {
 <p>Introducing the option to select years (thus pausing the chart) solved much of the earlier issues! Readers are more apt to interact with the dataset when they access to pause or change the animation.</p>
 <p>The main problem in this graph is some values are so small changes can’t be viewed (such as ‘security’).</p>
 </div>
-<div id="index_final.html" class="section level4">
-<h4>4) index_final.html</h4>
+<div id="index4.html" class="section level4">
+<h4>4) index4.html</h4>
 <p>Because the ‘On Time’ Information was taking up most of the graph it was removed to help better understand delay reasons for each Carrier. The number of carriers in each data set is mapped on the selection for each year.</p>
 <p>The only value so small it’s <em>still</em> difficult to view is ‘Security’. I do not see this as a problem because (with ‘On Time’ no longer part of the graph and a similar color to ‘Security’) the contrast with the smaller variables is more readily apparent.</p>
 <p>A piece of feedback I received is being able to rearrange bars horizontally to more easily rank carriers. Although this is a great feature I feel having more moving parts would be very difficult for readers to understand.</p>
 <p>Because the ‘On Time’ Information was taking up most of the graph it was removed to help better understand delay reasons for each Carrier. The number of carriers in each data set is mapped on the selection for each year.</p>
 <p>The only value so small it’s <em>still</em> difficult to view is ‘Security’. I do not see this as a problem because (with ‘On Time’ no longer part of the graph and a similar color to ‘Security’) the contrast with the smaller variables is more readily apparent.</p>
+<p>A review indicated there needs to be an explanatory analysis; the current graph doesn’t make any statements.</p>
+</div>
+<div id="index_final.html" class="section level4">
+<h4>5) index_final.html</h4>
+<p>An analysis was included in the chart. The analysis points to the major factors readers should consider.</p>
+<p>Explanation of zero vs low percent delay included.</p>
+<p>The colors of the year-buttons is different scales of black to differentiate from the main colors of the graph and to highlight the selected year.</p>
+<p>Animation now pauses after the last frame.</p>
+<p>Feedback: “Oh it’s just more text.. Hah! I didn’t realize Hawaiian [Airlines] was so good.”</p>
 </div>
 </div>
 <div id="feedback" class="section level1">
