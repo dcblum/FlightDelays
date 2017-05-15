@@ -4,7 +4,7 @@
   <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
   <script type="text/javascript">
       var svg = dimple.newSvg("#chartContainer", 1500, 1500);
-      d3.csv("data/flight_data_value_delays.csv", function (data) {
+      d3.csv("data/flight_data_ontime.csv", function (data) {
           // Much of the animated graphing code is found
           // from examples at dimplejs.org
 
@@ -26,7 +26,7 @@
           // Create the indicator chart on the right of the main chart
           var indicator = new dimple.chart(svg, data);
 
-          // Pick blue as the default and orange for the selected month
+          // Pick silver as the default and black for the selected month
           var defaultColor = indicator.assignColor("Year", 'silver');
           var indicatorColor = indicator.assignColor("Year", 'black');
 
@@ -94,25 +94,16 @@
           var myChart = new dimple.chart(svg, data);
           myChart.setBounds(100, 400, 1010, 610)
 
-          // Set x for main chart
-          var x_chart = myChart.addCategoryAxis("x", "Carrier Name");
-          x_chart.addOrderRule("Carrier Name");
-          x_chart.fontSize = 14;
+          var x_bar = myChart.addCategoryAxis('x', 'Carrier Name')
+          var y_bar = myChart.addMeasureAxis('y', 'On Time')
 
-          // Set y for main chart
-          var y_chart = myChart.addMeasureAxis("y", "Value")
-          y_chart.overrideMax = 40;
-          y_chart.title = "Percent Delay of All Flights";
-          y_chart.fontSize = 14;
+          x_bar.addOrderRule('On Time', true)
+          y_bar.overrideMax = 100
 
-          myChart.addSeries("Category", dimple.plot.bar)
-
-          // Make legend
-          var legend = myChart.addLegend(200, 350, 1000, 20, "left");
-          legend.fontSize = 14;
+          myChart.addSeries(null, dimple.plot.bar)
 
           // Add a storyboard to the main chart and set the tick event
-          var story = myChart.setStoryboard("Year", onTick);
+          var story = myChart.setStoryboard('Year', onTick);
           // Change the frame duration
           story.frameDuration = frame;
 
