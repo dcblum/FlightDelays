@@ -4,7 +4,7 @@
   <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
   <script type="text/javascript">
       var svg = dimple.newSvg("#chartContainer", 1500, 1500);
-      d3.csv("data/flight_data_ontime.csv", function (data) {
+      d3.csv("data/flight_data_ontimepercent.csv", function (data) {
           // Much of the animated graphing code is found
           // from examples at dimplejs.org
 
@@ -14,7 +14,14 @@
               .attr("text-anchor", "middle")
               .style("font-size", "24px")
               .style("text-decoration", "underline")
-              .text("Flight Delay and Carrier Count Decrease Since Mid 2000's");
+              .text("Hawaiian Airlines Best On Time");
+
+          svg.append("text")
+              .attr("x", (600))
+              .attr('y', (375))
+              .attr("text-anchor", "middle")
+              .style("font-size", "24px")
+              .text("On Time Flights: 2003 to 2017");
 
           // Filter over Years
           data = dimple.filterData(data, "Year", [
@@ -95,9 +102,9 @@
           myChart.setBounds(100, 400, 1010, 610)
 
           var x_bar = myChart.addCategoryAxis('x', 'Carrier Name')
-          var y_bar = myChart.addMeasureAxis('y', 'On Time')
+          var y_bar = myChart.addMeasureAxis('y', 'On Time Percent')
 
-          x_bar.addOrderRule('On Time', true)
+          x_bar.addOrderRule('On Time Percent', true)
           y_bar.overrideMax = 100
 
           myChart.addSeries(null, dimple.plot.bar)

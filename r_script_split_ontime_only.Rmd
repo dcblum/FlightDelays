@@ -73,14 +73,14 @@ levels(df$carrier_name)[levels(df$carrier_name) == 'ATA Airlines d/b/a ATA'] <- 
 # rename carrier_name
 names(df)[names(df) == 'carrier_name'] <- 'Carrier Name'
 names(df)[names(df) == 'year'] <- 'Year'
-names(df)[names(df) == 'On_Time'] <- 'On Time'
+names(df)[names(df) == 'On_Time'] <- 'On Time Percent'
 
 ```
 
 
 ```{r}
 # Write to csv
-write.csv(df, file = "data/flight_data_ontime.csv", row.names = FALSE)
+write.csv(df, file = "data/flight_data_ontimepercent.csv", row.names = FALSE)
 
 ```
 
